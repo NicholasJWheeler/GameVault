@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="GameVault.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GameVault"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="Trending" Icon="fire_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Trending}" />
+        </Tab>
+        <Tab Title="Backlog" Icon="list_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Backlog}" />
+        </Tab>
+        <Tab Title="Profile" Icon="person_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Profile}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

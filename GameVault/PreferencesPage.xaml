@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameVault.PreferencesPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="700"/>
+            <!-- This row will contain your existing content -->
+            <RowDefinition Height="Auto"/>
+            <!-- This row will contain the first button -->
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Grid.Row="0">
+            <Label 
+            Text="User Preferences" FontAttributes="Bold"
+            FontSize="34"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" Margin="20" />
+            
+            <!--Username Section-->
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="10">
+                <Label 
+                    Text="Username:"
+                    FontSize="22"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" Margin="0,0,10,0"/>
+                <Border WidthRequest="230"
+                        HeightRequest="45"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 10">
+                    <Entry
+                        x:Name="usernameEntry"
+                        Placeholder="Max Length 10 Characters"
+                        Text=""
+                        WidthRequest="230"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" MaxLength="10" Margin="0,0,0,0"/>
+                </Border>
+            </HorizontalStackLayout>
+
+            <!--Profile Picture Section-->
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="10">
+                <Label
+                    Text="Profile Picture:"
+                    FontSize="22"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" Margin="0,0,15,0"/>
+                <Border WidthRequest="100"
+                        HeightRequest="45"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 10">
+                    <Picker x:Name="profilePicturePicker"
+                            SelectedIndex="0" SelectedItem="Default"
+                            WidthRequest="100"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            FontSize="18">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Default</x:String>
+                                <x:String>Astronaut</x:String>
+                                <x:String>Dinosaur</x:String>
+                                <x:String>Diver</x:String>
+                                <x:String>Wizard</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Border>
+            </HorizontalStackLayout>
+
+            <!--Game Length Section-->
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="10">
+                <Label
+                    Text="Game Length Preference:"
+                    FontSize="22"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" Margin="0,0,15,0"/>
+                <Border WidthRequest="100"
+                     HeightRequest="45"
+                     StrokeThickness="0"
+                     StrokeShape="RoundRectangle 10">
+                    <Picker x:Name="gameLengthPicker"
+                            SelectedIndex="0" SelectedItem="Shorter"
+                            WidthRequest="100"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            FontSize="18">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Shorter</x:String>
+                                <x:String>Longer</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Border>
+            </HorizontalStackLayout>
+
+            <!--Game Genre Section-->
+            <HorizontalStackLayout HorizontalOptions="Center"  Margin="10">
+                <Label
+                    Text="Game Genre Preference:"
+                    FontSize="22"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" Margin="0,0,15,0"/>
+                <Border WidthRequest="100"
+                         HeightRequest="45"
+                         StrokeThickness="0"
+                         StrokeShape="RoundRectangle 10">
+                    <Picker x:Name="favoriteGenrePicker"
+                            SelectedIndex="0" SelectedItem="Action"
+                            WidthRequest="100"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            FontSize="18">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Action</x:String>
+                                <x:String>Adventure</x:String>
+                                <x:String>Indie</x:String>
+                                <x:String>RPG</x:String>
+                                <x:String>Strategy</x:String>
+                                <x:String>Shooter</x:String>
+                                <x:String>Casual</x:String>
+                                <x:String>Simulation</x:String>
+                                <x:String>Puzzle</x:String>
+                                <x:String>Arcade</x:String>
+                                <x:String>Platformer</x:String>
+                                <x:String>Racing</x:String>
+                                <x:String>Sports</x:String>
+                                <x:String>Fighting</x:String>
+                                <x:String>Family</x:String>
+                                <x:String>Educational</x:String>
+                                <x:String>Card</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Border>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <!-- First button at the bottom -->
+        <Button x:Name="DonePrefBtn" Text="Done" FontSize="18" Grid.Row="1" Margin="5,10,5,0" Padding="20" CornerRadius="35" Clicked="DonePrefBtn_Clicked"></Button>
+        
+    </Grid>
+</ContentPage>

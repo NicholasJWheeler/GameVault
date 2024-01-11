@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameVault.GameView"
+             Title="GameView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- This row will contain your existing content -->
+            <RowDefinition Height="630"/>
+
+            <!-- This row will contain the first button -->
+            <RowDefinition Height="Auto"/>
+
+            <!-- This row will contain the second button -->
+            <RowDefinition Height="Auto"/>
+
+            <!-- This row will contain the third button -->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Grid.Row="0">
+            <Label 
+                x:Name="gameNameLabel"
+                Text="" FontAttributes="Bold"
+                TextDecorations="Underline"
+                FontSize="32"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"  Margin="20" />
+            <Image x:Name="currentGameImage" Source="" Aspect="AspectFill" HeightRequest="300"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!-- First Row -->
+                <Label x:Name="releaseDateLabel" Text="Release Date: " FontAttributes="Bold" 
+                   FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="10" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <!-- Second Row -->
+                <Label x:Name="metacriticLabel" Text="Metacritic Score: " FontAttributes="Bold" 
+                   FontSize="14" VerticalOptions="Center" HorizontalOptions="Center" Margin="10" Grid.Row="1" Grid.Column="0"/>
+                <Label x:Name="esrbLabel" Text="ESRB Rating: " FontAttributes="Bold" 
+                   FontSize="16" VerticalOptions="Center" HorizontalOptions="Center" Margin="10" Grid.Row="1" Grid.Column="1"/>
+                <!-- Third Row -->
+                <Label x:Name="playtimeLabel" Text="Playtime (may be inaccurate): " FontAttributes="Bold"
+                   FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="10" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <!-- Fourth Row -->
+                <Label x:Name="platformsLabel" Text="Platforms: " FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                    FontSize="18" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,5,10,5" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <Label x:Name="genresLabel" Text="Genre(s): " FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                    FontSize="18" VerticalOptions="Center" HorizontalOptions="Center" Margin="10" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
+            </Grid>
+        </VerticalStackLayout>
+        
+        <!-- First button at the bottom -->
+        <Button x:Name="addToVaultBtn" Text="Rate &amp; Add To Vault" FontSize="18" Grid.Row="1" Margin="5,10,5,0" Padding="10" CornerRadius="35" Clicked="addToVaultBtn_Clicked"></Button>
+        <!-- Second button at the bottom -->
+        <Button x:Name="addToBacklogBtn" Text="Add To Backlog" FontSize="18" Grid.Row="2" Margin="5,10,5,0" Padding="10" CornerRadius="35" Clicked="addToBacklogBtn_Clicked"></Button>
+        <!-- Third button at the bottom -->
+        <Button x:Name="backBtn" Text="Back" FontSize="18" Grid.Row="3" Margin="5,10,5,0" Padding="10" CornerRadius="35" Clicked="backBtn_Clicked"></Button>
+    </Grid>
+    
+</ContentPage>

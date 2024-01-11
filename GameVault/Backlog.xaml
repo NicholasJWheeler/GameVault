@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameVault.Backlog">
+
+    <VerticalStackLayout>
+        <Label x:Name="TopGamesLabel"
+            Text="What To Play Next" FontAttributes="Bold"
+            FontSize="32"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" Margin="15,10,15,6" />
+        <HorizontalStackLayout HorizontalOptions="FillAndExpand" Padding="40,5,40,7">
+            <Label Text="Sorting:" FontSize="18" HorizontalOptions="Center" FontAttributes="Bold" HorizontalTextAlignment="Center" Padding="20,-4,20,0" VerticalTextAlignment="Center"/>
+            <RadioButton x:Name="byPlaytimeRadio" Content="By Playtime" IsChecked="True" CheckedChanged="byPlaytimeRadio_CheckedChanged"/>
+            <RadioButton x:Name="byNameRadio" Content="By Name" IsChecked="False" CheckedChanged="byNameRadio_CheckedChanged"/>
+        </HorizontalStackLayout>
+        <ListView x:Name="backlogListView" ItemTapped="backlogListView_ItemTapped" VerticalScrollBarVisibility="Always" HeightRequest="645" RowHeight="175" HasUnevenRows="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#1c191a">
+                            <Border BackgroundColor="White" HeightRequest="175" StrokeThickness="5" StrokeShape="RoundRectangle 15">
+                                <Grid>
+                                    <Image Source="{Binding BacklogListImageSource}" Aspect="AspectFill" />
+                                    <Frame IsClippedToBounds="True">
+                                        <Frame.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                <GradientStop Color="Transparent" Offset="0" />
+                                                <GradientStop Color="#1c191a" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Frame.Background>
+                                        <VerticalStackLayout BackgroundColor="Transparent" VerticalOptions="End">
+                                            <Label Grid.Row="0" Text="{Binding BacklogListTitle}" VerticalOptions="End" FontSize="18" FontAttributes="Bold" TextColor="{Binding BacklogLabelColor}"/>
+                                            <Label Text="{Binding BacklogListFormattedPlaytime}" VerticalOptions="End" FontSize="14" FontAttributes="Bold" TextColor="{Binding BacklogLabelColor}"/>
+                                        </VerticalStackLayout>
+                                    </Frame>
+                                </Grid>
+                            </Border>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

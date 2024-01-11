@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameVault.Profile">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="595"/>
+            <!-- This row will contain your existing content -->
+            <RowDefinition Height="Auto"/>
+            <!-- This row will contain the first button -->
+            <RowDefinition Height="Auto"/>
+            <!-- This row will contain the second button -->
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Grid.Row="0">
+            <Label 
+                x:Name="UsernameLabel"
+                Text="Welcome, OrbMaster1" FontAttributes="Bold"
+                FontSize="32"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" Margin="20" />
+            <Border WidthRequest="250"
+                HeightRequest="250"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 125">
+                <Image x:Name="ProfileImg" Source="wizard.png" HeightRequest="310" WidthRequest="310"/>
+            </Border>
+            <Label x:Name="vaultGameCountLabel"
+                Text="Games Finished: 0"
+                FontSize="28"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" Margin="0,20,0,0"/>
+            <Label x:Name="backlogGameCountLabel"
+                Text="Games In Backlog: 0"
+                FontSize="28"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" Margin="0,20,0,0"/>
+            <Label x:Name="vaultGameRatingAvgLabel"
+                Text="Average Rating Given: 0.0"
+                FontSize="30"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" Margin="0,20,0,0"/>
+            <Label 
+                x:Name="gamePreferenceLabel"
+                Text="Prefers Shorter Games"
+                FontSize="24"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" Margin="0,20,0,0"/>
+        </VerticalStackLayout>
+
+        <!-- First button at the bottom -->
+        <Button x:Name="myVaultBtn" Text="My Vault" FontSize="18" Grid.Row="1" Margin="5,10,5,0" Padding="20" CornerRadius="35" Clicked="myVaultBtn_Clicked"></Button>
+
+        <!-- Second button at the bottom -->
+        <Button x:Name="myPreferencesBtn" Text="User Preferences" FontSize="18" Grid.Row="2" Margin="5,10,5,0" Padding="20" CornerRadius="35" Clicked="myPreferencesBtn_Clicked"></Button>
+
+    </Grid>
+</ContentPage>

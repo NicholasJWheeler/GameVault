@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameVault.Trending">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- This row will contain your existing content -->
+            <RowDefinition Height="700"/>
+
+            <!-- This row will contain the first button -->
+            <RowDefinition Height="Auto"/>
+
+            <!-- This row will contain the second button -->
+            <RowDefinition Height="Auto"/>
+            
+        </Grid.RowDefinitions>
+        
+        <VerticalStackLayout Grid.Row="0">
+            <Label 
+                x:Name="TopGamesLabel"
+                Text="Top Games This Year" FontAttributes="Bold"
+                TextDecorations="Underline"
+                FontSize="32"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" Margin="15,5,15,6" />
+            <CarouselView x:Name="carouselView" IndicatorView="indicatorView" HeightRequest="230">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout  HeightRequest="230">
+                            <Border BackgroundColor="#1c191a" HeightRequest="230" StrokeShape="RoundRectangle 10">
+                                <VerticalStackLayout BackgroundColor="#574E51">
+                                    <!-- Image -->
+                                    <ImageButton x:Name="gameImageBtn"  Source="{Binding ImageSource}" Aspect="AspectFill" 
+                                                 HeightRequest="200" Clicked="gameImageBtn_Clicked"/>
+
+                                    <!-- Label -->
+                                    <Label x:Name="gameCarouselLabel" Text="{Binding Title}" FontSize="20" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,0,0,0"/>
+                                </VerticalStackLayout>
+                            </Border>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <IndicatorView x:Name="indicatorView" Margin="0,10,0,5" HorizontalOptions="Center" IndicatorColor="White" SelectedIndicatorColor="#32A10F"/>
+            <Label 
+                x:Name="bestGenreGamesLabel"
+                Text="" FontAttributes="Bold"
+                FontSize="32"
+                TextDecorations="Underline"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" Margin="20,0,20,5" />
+            <ListView x:Name="listView" VerticalScrollBarVisibility="Always" HeightRequest="390" RowHeight="175" HasUnevenRows="true" ItemTapped="listView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#1c191a">
+                                <Border BackgroundColor="White" HeightRequest="175" StrokeThickness="5" StrokeShape="RoundRectangle 15">
+                                    <Grid>
+                                        <Image Source="{Binding ListImageSource}" Aspect="AspectFill" />
+                                        <Frame IsClippedToBounds="True">
+                                            <Frame.Background>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                    <GradientStop Color="Transparent" Offset="0" />
+                                                    <GradientStop Color="#1c191a" Offset="1" />
+                                                </LinearGradientBrush>
+                                            </Frame.Background>
+                                            <Label Text="{Binding ListTitle}" VerticalOptions="End" FontSize="18" FontAttributes="Bold"/>
+                                        </Frame>
+                                    </Grid>
+                                </Border>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GameVault"
+             x:Class="GameVault.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Dark.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="VerticalStackLayout">
+                <Setter Property="BackgroundColor" Value="{DynamicResource BackgroundColor}" />
+            </Style>
+            <Style TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="{DynamicResource BackgroundColor}" />
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}" />
+            </Style>
+            <Style TargetType="RadioButton">
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource BackgroundColor}" />
+                <Setter Property="BorderColor" Value="{DynamicResource TextColor}" />
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="BackgroundColor" Value="{DynamicResource InputBackgroundColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="{DynamicResource InputBackgroundColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource ButtonColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource ButtonTextColor}" />
+            </Style>
+            <Style TargetType="TabBar">
+                <Setter Property="Shell.TabBarBackgroundColor"
+            Value="{DynamicResource BackgroundColor}" />
+                <Setter Property="Shell.TabBarTitleColor"
+            Value="{DynamicResource ButtonColor}" />
+                <Setter Property="Shell.TabBarUnselectedColor"
+            Value="{DynamicResource TextColor}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

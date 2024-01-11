@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameVault.RatingPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- This row will contain your existing content -->
+            <RowDefinition Height="660"/>
+
+            <!-- This row will contain the first button -->
+            <RowDefinition Height="Auto"/>
+
+            <!-- This row will contain the second button -->
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Grid.Row="0">
+            <Label 
+                x:Name="gameCompletionLabel"
+                Text="Game Completion" FontAttributes="Bold"
+                TextDecorations="Underline"
+                FontSize="32"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"  Margin="10" />
+            <Label 
+                x:Name="gameNameLabel"
+                Text="" FontAttributes="Bold"
+                FontSize="22"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"  Margin="0,0,0,15" />
+            <Image x:Name="currentGameImage" Source="" Aspect="AspectFill" HeightRequest="300"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!-- First Row -->
+                <Slider x:Name="ratingSlider" Value="2.50" Maximum="5.0" Minimum="0" MinimumTrackColor="#32A10F" MaximumTrackColor="White" 
+                        Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" ValueChanged="ratingSlider_ValueChanged" Margin="0,10,0,0"/>
+                <!-- Second Row -->
+                <Label x:Name="gamePersonalRatingLabel" Text="Your Game Rating: 2.50" FontAttributes="Bold" 
+               FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="10" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <!-- Third Row -->
+                <Label x:Name="metacriticLabel" Text="Would You Replay It? " FontAttributes="Bold" 
+               FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="15" Grid.Row="2" Grid.Column="0"/>
+                <!-- Fourth Row -->
+                <Border WidthRequest="100"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        HeightRequest="45"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 10" Grid.Row="2" Grid.Column="1">
+                    <Picker x:Name="gameReplayPicker"
+                            SelectedIndex="0" SelectedItem="Default"
+                            WidthRequest="100"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            FontSize="20">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Yes</x:String>
+                                <x:String>No</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Border>
+                <!-- Fourth Row -->
+                <Label x:Name="personalPlaytimeLabel" Text="Your Playtime (hours): " FontAttributes="Bold"
+                        FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="10"
+                        HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
+                
+                <!-- Fifth Row -->
+                <Border WidthRequest="230"
+                        HeightRequest="45"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 10" HorizontalOptions="Center" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Entry
+                        x:Name="playedHoursEntry"
+                        Placeholder="Whole Numbers Only"
+                        Text=""
+                        WidthRequest="230"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" MaxLength="5" Margin="0,0,0,0"/>
+                </Border>
+
+            </Grid>
+        </VerticalStackLayout>
+
+        <!-- First button at the bottom -->
+        <Button x:Name="addToVaultBtn" Text="Add To Vault" FontSize="18" Grid.Row="1" Margin="5,10,5,0" Padding="10" CornerRadius="35" Clicked="addToVaultBtn_Clicked"></Button>
+        <!-- Second button at the bottom -->
+        <Button x:Name="cancelBtn" Text="Cancel" FontSize="18" Grid.Row="3" Margin="5,10,5,0" Padding="10" CornerRadius="35" Clicked="cancelBtn_Clicked"></Button>
+
+    </Grid>
+</ContentPage>

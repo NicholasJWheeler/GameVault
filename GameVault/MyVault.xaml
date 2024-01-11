@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameVault.MyVault">
+    <VerticalStackLayout>
+        <Label x:Name="FinishedGamesLabel"
+        Text="Finished Games" FontAttributes="Bold"
+        FontSize="32"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" Margin="15,10,15,6" />
+        <HorizontalStackLayout HorizontalOptions="FillAndExpand" Padding="40,5,40,7">
+            <Label Text="Sorting:" FontSize="18" HorizontalOptions="Center" FontAttributes="Bold" HorizontalTextAlignment="Center" Padding="20,-4,20,0" VerticalTextAlignment="Center"/>
+            <RadioButton x:Name="byRatingRadio" Content="By Rating" IsChecked="True" CheckedChanged="byRatingRadio_CheckedChanged"/>
+            <RadioButton x:Name="byNameRadio" Content="By Name" IsChecked="False" CheckedChanged="byNameRadio_CheckedChanged"/>
+        </HorizontalStackLayout>
+        <ListView x:Name="vaultListView" ItemTapped="vaultListView_ItemTapped" VerticalScrollBarVisibility="Always" HeightRequest="630" RowHeight="175" HasUnevenRows="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#1c191a">
+                            <Border BackgroundColor="White" HeightRequest="175" StrokeThickness="5" StrokeShape="RoundRectangle 15">
+                                <Grid>
+                                    <Image Source="{Binding VaultListImageSource}" Aspect="AspectFill" />
+                                    <Frame IsClippedToBounds="True">
+                                        <Frame.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                <GradientStop Color="Transparent" Offset="0" />
+                                                <GradientStop Color="#1c191a" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Frame.Background>
+                                    <Grid BackgroundColor="Transparent" VerticalOptions="End">
+                                         <Grid.RowDefinitions>
+                                             <RowDefinition Height="*"/>
+                                             <RowDefinition Height="*" />
+                                         </Grid.RowDefinitions>
+                                         <Grid.ColumnDefinitions>
+                                             <ColumnDefinition Width="100"/>
+                                             <ColumnDefinition Width="*"/>
+                                             <ColumnDefinition Width="*"/>
+                                         </Grid.ColumnDefinitions>
+                                         <Label Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
+                                                Text="{Binding VaultListFormattedUserRating}" VerticalOptions="Center" HorizontalOptions="Center"
+                                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="24" 
+                                                FontAttributes="Bold" TextColor="{Binding VaultRatingLabelColor}" Margin="5,5,15,5"/>
+                                         <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding VaultGameTitle}" VerticalOptions="End" FontSize="18" FontAttributes="Bold" TextColor="White"/>
+                                         <Label Grid.Row="1" Grid.Column="1" Text="{Binding VaultListFormattedUserPlaytime}" VerticalOptions="End" FontSize="14" FontAttributes="Bold" TextColor="White"/>
+                                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding VaultFormattedReplayIt}" VerticalOptions="End" FontSize="14" FontAttributes="Bold" TextColor="{Binding VaultReplayLabelColor}"/>
+                                        </Grid> 
+                                        <!--<VerticalStackLayout BackgroundColor="Transparent" VerticalOptions="End">
+                                                <Label Grid.Row="0" Text="{Binding VaultGameTitle}" VerticalOptions="End" FontSize="18" FontAttributes="Bold" TextColor="{Binding VaultLabelColor}"/>
+                                                <Label Text="{Binding VaultListFormattedUserPlaytime}" VerticalOptions="End" FontSize="14" FontAttributes="Bold" TextColor="{Binding VaultLabelColor}"/>
+                                            </VerticalStackLayout> -->
+                                        
+                                        
+                                    </Frame>
+                                </Grid>
+                            </Border>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="backBtn" Text="Back" FontSize="18" Grid.Row="3" Margin="5,10,5,0" Padding="10" CornerRadius="35" Clicked="backBtn_Clicked"></Button>
+    </VerticalStackLayout>
+</ContentPage>
