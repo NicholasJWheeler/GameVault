@@ -81,15 +81,25 @@ GameVault was created as the semester project for my CSE 386 class.
 ## 🕹️ The Full App
 
 <p align="center">
-	<img src="https://github.com/NicholasJWheeler/Recipedia/blob/main/Images/Final1.png?raw=true">
+	<img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/Trending1.png?raw=true">
 	<br><br>
-	<img src="https://github.com/NicholasJWheeler/Recipedia/blob/main/Images/Final2.png?raw=true">
+	<img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/Trending2.png?raw=true" width="527" height="1151">
 	<br><br>
-	<img src="https://github.com/NicholasJWheeler/Recipedia/blob/main/Images/Final3.png?raw=true">
+	<img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/Backlog1.png?raw=true">
 	<br><br>
-	<img src="https://github.com/NicholasJWheeler/Recipedia/blob/main/Images/Final4.png?raw=true">
-  <br><br>
-  <img src="https://github.com/NicholasJWheeler/Recipedia/blob/main/Images/Final5.png?raw=true">
+	<img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/Backlog2.png?raw=true">
+	<br><br>
+	<img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/Backlog3.png?raw=true">
+	<br><br>
+	<img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/Profile1.png?raw=true">
+  	<br><br>
+  	<img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/UserPref1.png?raw=true">
+	<br><br>
+	<img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/UserPref2.png?raw=true">
+	<br><br>
+	<img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/Vault1.png?raw=true">
+	<br><br>
+	<img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/Vault2.png?raw=true">
 </p>
 
 <br><br><br>
