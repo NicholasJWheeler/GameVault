@@ -46,14 +46,13 @@ GameVault allows users to customize their profile page to align with their inter
 <br><br>
 
 ### 📝 Game Lists and Local Database
-A local storage database is utilized for the app to store the backlog of games the user would like to play and document the reviews the user has created for games already completed. Calls to the local database to update the backlog and reviews utilize an SQLiteConnection within the C# code. Below is a snippet of code from the DB.cs file showcasing this database class that is referenced by other sections of the app for data retrieval and storage.
+A local storage database is used to store the backlog of games the user wants to play and document the reviews the user has created for completed games. Calls to the local database to update the backlog and reviews utilize an SQLite connection within the C# code. Below is a snippet of code from the DB.cs file showcasing this database class, which is referenced by other sections of the app for data retrieval and storage.
 <br><br>
 <img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/DatabaseCode.png?raw=true">
-
 <br><br>
 
 ### 👨‍💻 C# and .NET MAUI
-
+This application was developed using C# in the .NET MAUI environment, allowing code to be written once and deployed across multiple platforms, including Android, iOS, macOS, Windows, and more. .NET MAUI enables developers to design the application for one platform, such as Android, and then easily port the design to other platforms, like Apple devices. Additionally, C# supports intuitive software design through object-oriented programming while maintaining security and efficiency within the .NET framework.
 <br><br>
 
 ### 🎮 RAWG API
@@ -62,9 +61,9 @@ A local storage database is utilized for the app to store the backlog of games t
 	<li><a href="https://rawg.io/apidocs" target="_blank">RAWG Video Game API</a></li>
 </ul>
 
-<br><br>
+This API provides detailed information about hundreds of thousands of video games to my application. Users can access data such as the game's release year, supported platforms, Metacritic score, approximate average playtime, and more. GameVault uses this data to help users make informed decisions about which game to play next and to see what others have thought about the same game.
 
-<br><br><br><br>
+<br><br>
 
 - - - -
 
