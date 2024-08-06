@@ -20,7 +20,7 @@
         <li><a href="#-c#-and-.net-maui">👨‍💻 C# and .NET MAUI</a></li>
 				<li><a href="#-rawg-api">🎮 RAWG API</a></li>
 			</ul>
-			<a href="#-the-full-app">🕹️ The Full App</a><br><br>
+			<a href="#%EF%B8%8F-the-full-app">🕹️ The Full App</a><br><br>
 		</td>
   	</tr>
 	<tr>
