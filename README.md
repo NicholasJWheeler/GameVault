@@ -68,7 +68,7 @@ GameVault was created as the semester project for my CSE 386 class. My goal was 
 <br>
 
 <h3 align="center">
-  👾 You are ready to start gaming! 👾
+  👾 You are ready to start reviewing games! 👾
 </h3>
 
 <br>
