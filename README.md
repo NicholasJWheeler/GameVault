@@ -37,7 +37,7 @@ I took this during my junior year of college in the fall of 2023. This 15-week c
 
 <br><br><br>
 ## ℹ About The Application
-GameVault was created as the semester project for my CSE 386 class. 
+GameVault was created as the semester project for my CSE 386 class. My goal was to create a production-level app that would be suitable to be featured on the Google Play Store. I wanted to create a solution for people to manage their backlog of video games and rate the ones they have already played to track their activity. GameVault utilizes local storage and device preferences to allow users to customize their profiles and set their favorite game genres for future recommendations. The RAWG API is also implemented to provide users with the largest video game catalog available featuring over 500,000 games to select and review.
 
 <br><br><br>
 ## 📱 GameVault Features
