@@ -42,7 +42,7 @@ GameVault was created as the semester project for my CSE 386 class. My goal was 
 <br><br><br>
 ## 📱 GameVault Features
 ### 👤 User Profile Personalization
-
+GameVault allows users to customize their profile page to align with their interests and fill out game-related preferences that affect how games are recommended and displayed. Users can choose from a unique set of profile pictures, input a username, and select their favorite game genre and length. The selected game genre will display the most popular and highest-rated games in that genre for the user to explore. The selected game length will influence the order in which games are displayed on the Backlog page when sorting 'By Playtime,' with a preference for shorter games displaying those games first, and vice versa.
 <br><br>
 
 ### 📝 Game Lists and Local Database
