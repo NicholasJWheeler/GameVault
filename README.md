@@ -46,6 +46,9 @@ GameVault allows users to customize their profile page to align with their inter
 <br><br>
 
 ### 📝 Game Lists and Local Database
+A local storage database is utilized for the app to store the backlog of games the user would like to play and document the reviews the user has created for games already completed. Calls to the local database to update the backlog and reviews utilize an SQLiteConnection within the C# code. Below is a snippet of code from the DB.cs file showcasing this database class that is referenced by other sections of the app for data retrieval and storage.
+<br><br>
+<img src="https://github.com/NicholasJWheeler/GameVault/blob/main/Images/DatabaseCode.png?raw=true">
 
 <br><br>
 
